@@ -11,6 +11,10 @@
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="assets/css/index.css">
+        <link rel="preload" as="image" href="assets/img/maracana-capa.jpg" imagesizes="100vw">
+        <link rel="dns-prefetch" href="//images.flamengo.com.br">
+        <link rel="dns-prefetch" href="//blogdofla.com">
+        <link rel="dns-prefetch" href="//cdn-img.zerozero.pt">
 
         <meta name="description" content="Clube de Regatas do Flamengo — história, conquistas, elenco e patrocinadores.">
         <meta name="keywords" content="Flamengo, CRF, títulos, elenco, história, patrocinadores">
@@ -27,8 +31,19 @@
         <meta name="twitter:description" content="Raça, Amor e Paixão. Bem-vindo ao território rubro-negro.">
         <meta name="twitter:image" content="assets/img/maracana-capa.jpg">
         <meta name="theme-color" content="#D50000">
+        <meta name="color-scheme" content="dark light">
         <link rel="icon" href="assets/img/logo-menu.webp" type="image/webp">
         <link rel="canonical" href="/index.html">
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Clube de Regatas do Flamengo",
+          "url": "/index.html",
+          "description": "Site institucional não oficial criado por torcedor para demonstrar habilidades, com história, conquistas, elenco e patrocinadores."
+        }
+        </script>
 </head>
 <body>
     <a class="skip-link" href="#main-content">Pular para conteúdo principal</a>
@@ -704,7 +719,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <div class="logo logo--footer"><img src="assets/img/logo-menu.webp" alt="Clube de Regatas do Flamengo" class="logo__img"></div>
+                    <div class="logo logo--footer"><img src="assets/img/logo-menu.webp" alt="Clube de Regatas do Flamengo" class="logo__img" loading="lazy" decoding="async"></div>
                     <p class="text-muted">Av. Borges de Medeiros, 997<br>Lagoa - Rio de Janeiro / RJ</p>
                 </div>
                 <div class="footer-col">
@@ -752,6 +767,11 @@
         }
         document.body.appendChild(s);
       })();
+    </script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js').catch(function(){});
+      }
     </script>
 </body>
 </html>
