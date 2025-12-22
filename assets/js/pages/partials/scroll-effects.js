@@ -11,6 +11,10 @@ if (typeof IntersectionObserver !== 'undefined') {
         const el = entry.target;
         if (el.classList.contains('produto-card')) {
           el.classList.add('visible');
+        } else if (el.classList.contains('history-item')) {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+          el.classList.add('active');
         } else if (el.classList.contains('player-card')) {
           el.style.opacity = '1';
           el.style.transform = 'translateY(0)';

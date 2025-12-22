@@ -1,4 +1,4 @@
-const CACHE_NAME = 'site-flamengo-v1';
+const CACHE_NAME = 'site-flamengo-v2';
 const ASSETS = [
   '/',
   '/index.html',
@@ -9,6 +9,7 @@ const ASSETS = [
   '/assets/css/global/utilities.css',
   '/assets/js/index.js',
   '/assets/js/index.nomodule.js',
+  '/assets/js/pages/partials/scroll-effects.js',
   '/assets/img/logo-menu.webp',
   '/assets/img/maracana-capa.jpg'
 ];
@@ -36,6 +37,17 @@ self.addEventListener('fetch', (event) => {
   if (req.mode === 'navigate') {
     event.respondWith(
       fetch(req).catch(() => caches.match('/index.html'))
+    );
+    return;
+  }
+
+  if (req.destination === 'script' || url.pathname.endsWith('.js')) {
+    event.respondWith(
+      fetch(req).then((res) => {
+        const copy = res.clone();
+        caches.open(CACHE_NAME).then((cache) => cache.put(req, copy));
+        return res;
+      }).catch(() => caches.match(req))
     );
     return;
   }

@@ -93,6 +93,12 @@
   padding: 18px 20px;
 }
 
+.history-item.active {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: opacity 0.6s ease, transform 0.6s ease !important;
+}
+
 .history-item__year {
   font-family: 'BBH Bogle', sans-serif;
   text-transform: uppercase;
@@ -103,6 +109,11 @@
 
 #historia-detalhes {
   background-color: #0d0d0d;
+}
+
+.history-list {
+  content-visibility: auto;
+  contain-intrinsic-size: 600px;
 }
 
 @media (max-width: 768px) {

@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: 'BBH Bogle', sans-serif;
+  font-family: 'PT Serif', serif;
   background-color: var(--crf-black);
   color: var(--text-white);
   overflow-x: hidden;
@@ -15,7 +15,7 @@ h2,
 h3,
 h4,
 .btn {
-  font-family: 'BBH Bogle', sans-serif;
+  font-family: 'PT Serif', serif;
   text-transform: uppercase;
 }
 
