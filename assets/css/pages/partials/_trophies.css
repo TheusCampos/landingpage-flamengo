@@ -1,0 +1,26 @@
+#conquistas {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.85)),
+    url('../../../img/fundo-seção-flamengo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  #conquistas {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.85)),
+      url('../../../img/fundo-seção-flamengo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.trophy-card .player-pos {
+  color: var(--dourado);
+}
+
+.trophies-grid {
+  display: contents;
+}

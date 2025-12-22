@@ -1,0 +1,29 @@
+.nation-section {
+  background: linear-gradient(rgba(213, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+    url('../../../img/maracana-capa.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+  padding: 150px 0;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.stat-item h3 {
+  font-size: 4rem;
+  color: var(--text-white);
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

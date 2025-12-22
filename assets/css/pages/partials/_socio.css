@@ -1,0 +1,16 @@
+.socio-section {
+  background-color: var(--crf-red);
+  color: white;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+  margin: 50px 0;
+}
+
+.socio-content {
+  padding: 120px 20px;
+}
+
+.socio-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,75 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+@media (min-width: 1200px) {
+  .card-grid {
+    grid-template-columns: repeat(4, minmax(280px, 1fr));
+  }
+}
+
+.player-card {
+  background-color: var(--crf-gray);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: var(--transition);
+}
+
+.player-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.player-img {
+  height: 350px;
+  background-color: #333;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.player-img::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, var(--crf-gray), transparent);
+}
+
+.player-info {
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.player-number {
+  font-size: 3rem;
+  font-family: 'BBH Bogle', sans-serif;
+  color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: -40px;
+  right: 20px;
+}
+
+.player-name {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.player-pos {
+  color: var(--crf-red);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.player-desc {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: #ccc;
+}

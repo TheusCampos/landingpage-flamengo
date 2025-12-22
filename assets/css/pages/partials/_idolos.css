@@ -1,0 +1,238 @@
+.idolos-section {
+  position: relative;
+  background-color: var(--crf-black);
+  padding: 80px 0;
+}
+
+.idolos-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.idol-card {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.idol-card--right {
+  grid-template-columns: 1fr 380px;
+}
+
+.idol-figure {
+  width: 100%;
+  height: 480px;
+  background: var(--crf-gray);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+}
+
+.idol-figure::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.6));
+}
+
+.idol-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.idol-card:hover .idol-figure {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+}
+
+.idol-card:hover .idol-figure img {
+  transform: scale(1.05);
+}
+
+.idol-content {
+  background: var(--crf-gray);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 4px solid var(--crf-red);
+  padding: 40px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.idol-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, transparent 50%, rgba(255,255,255,0.03) 50%);
+  pointer-events: none;
+}
+
+.idol-card:hover .idol-content {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.idol-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 16px;
+}
+
+.idol-name {
+  font-family: 'BBH Bogle', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 4px;
+  color: var(--text-white);
+  line-height: 1.1;
+}
+
+.idol-nickname {
+  display: block;
+  font-family: 'BBH Bogle', sans-serif;
+  font-size: 1rem;
+  color: var(--crf-red);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.idol-bio {
+  color: var(--text-gray);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.idol-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.stat:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: rgba(255,255,255,0.1);
+}
+
+.stat-value {
+  font-family: 'BBH Bogle', sans-serif;
+  font-size: 2rem;
+  color: var(--text-white);
+  line-height: 1;
+  margin-bottom: 6px;
+  background: linear-gradient(to right, #fff, #ccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-gray);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.idol-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-gray);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.tag:hover {
+  background: rgba(213, 0, 0, 0.15);
+  color: var(--crf-red);
+  border-color: rgba(213, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .idol-card,
+  .idol-card--right {
+    grid-template-columns: 320px 1fr;
+    gap: 32px;
+  }
+  .idol-figure {
+    height: 420px;
+  }
+  .idol-name {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .idolos-wrapper {
+    gap: 60px;
+  }
+  .idol-card,
+  .idol-card--right {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .idol-card--right .idol-figure {
+    order: -1;
+  }
+  .idol-figure {
+    height: 360px;
+    max-width: 100%;
+  }
+  .idol-content {
+    padding: 24px;
+  }
+  .idol-header {
+    text-align: center;
+  }
+  .idol-stats {
+    gap: 12px;
+    padding: 16px;
+  }
+  .stat-value {
+    font-size: 1.5rem;
+  }
+  .idol-tags {
+    justify-content: center;
+  }
+}

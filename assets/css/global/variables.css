@@ -1,0 +1,20 @@
+:root {
+  --preto: #0A0A0A;
+  --cinza-escuro: #1C1C1C;
+  --branco: #FFFFFF;
+  --dourado: #C5A572;
+  --cinza-claro: #E0E0E0;
+  --cinza-texto: #9A9A9A;
+  --dourado-claro: #E3D1A6;
+  --dourado-escuro: #9F804F;
+  --dourado-rgba: 197, 165, 114;
+
+  --crf-red: #D50000;
+  --crf-dark-red: #8a0000;
+  --crf-black: #080808;
+  --crf-gray: #1a1a1a;
+  --text-white: #ffffff;
+  --text-gray: #b3b3b3;
+  --gold: #FFD700;
+  --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}

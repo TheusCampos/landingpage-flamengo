@@ -1,0 +1,15 @@
+@import url('./global/variables.css');
+@import url('./global/reset.css');
+@import url('./global/base.css');
+@import url('./global/utilities.css');
+@import url('./pages/partials/_hero.css');
+@import url('./pages/partials/_history.css');
+@import url('./pages/partials/_nation.css');
+@import url('./pages/partials/_elenco.css');
+@import url('./pages/partials/_trophies.css');
+@import url('./pages/partials/_idolos.css');
+@import url('./pages/partials/_sponsors.css');
+@import url('./pages/partials/_calendar.css');
+@import url('./pages/partials/_socio.css');
+@import url('./pages/partials/_shop.css');
+@import url('./pages/partials/_footer.css');

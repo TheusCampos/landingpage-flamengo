@@ -1,0 +1,57 @@
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.sponsor-item {
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+.sponsor-item:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.sponsor-item img {
+  max-height: 48px;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  filter: none;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .sponsor-item img {
+    max-height: 40px;
+  }
+}
+
+#patrocinadores {
+  background-color: #0d0d0d;
+}
+
+.sponsors-title {
+  font-family: 'BBH Bogle', sans-serif;
+  text-transform: uppercase;
+  color: var(--crf-red);
+  font-size: 0.875rem;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+.partners-grid {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.partners-grid .sponsor-item img {
+  max-height: 42px;
+  height: auto;
+}
